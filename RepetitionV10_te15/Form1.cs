@@ -35,6 +35,15 @@ namespace RepetitionV10_te15
 
             tbxFaktura.Text += kostnadExkl + " kr";
 
+            int moms, kostnadInkl;
+
+            moms = (int) (kostnadExkl * 0.25); //Vi castar till en int 
+            kostnadInkl = kostnadExkl + moms;
+
+            tbxFaktura.Text += "Moms (25%): " + moms + " kr";
+            tbxFaktura.Text += "\r\n";
+            tbxFaktura.Text += "Att betala: " + kostnadInkl + " kr";
+
         }
     }
 }
